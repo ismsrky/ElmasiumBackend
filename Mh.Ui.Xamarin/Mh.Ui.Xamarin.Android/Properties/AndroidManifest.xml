@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="elmasium.pack" android:installLocation="internalOnly">
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
+	<permission android:name="elmasium.pack.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="elmasium.pack.permission.C2D_MESSAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<application android:label="Elmasium" android:icon="@mipmap/icon">
+		<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				<category android:name="elmasium.pack" />
+			</intent-filter>
+		</receiver>
+	</application>
+</manifest>

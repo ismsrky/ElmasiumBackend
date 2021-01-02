@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4357321D-2978-46D2-96D9-C225A7C59D86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mh.Business.Bo</RootNamespace>
+    <AssemblyName>Mh.Business.Bo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address\AddressCityBo.cs" />
+    <Compile Include="Address\AddressCountryBo.cs" />
+    <Compile Include="Address\AddressDistrictBo.cs" />
+    <Compile Include="Address\AddressGetCityListCriteriaBo.cs" />
+    <Compile Include="Address\AddressGetDistrictListCriteriaBo.cs" />
+    <Compile Include="Address\AddressGetLocalityListCriteriaBo.cs" />
+    <Compile Include="Address\AddressGetStateListCriteriaBo.cs" />
+    <Compile Include="Address\AddressLocalityBo.cs" />
+    <Compile Include="Address\AddressStateBo.cs" />
+    <Compile Include="Approval\Fiche\ApprovalFicheGetListCriteriaBo.cs" />
+    <Compile Include="Approval\Fiche\ApprovalFicheListBo.cs" />
+    <Compile Include="Approval\Fiche\ApprovalFicheSaveBo.cs" />
+    <Compile Include="Approval\Relation\ApprovalRelationGetListCriteriaBo.cs" />
+    <Compile Include="Approval\Relation\ApprovalRelationListBo.cs" />
+    <Compile Include="Approval\Relation\ApprovalRelationRequestBo.cs" />
+    <Compile Include="Approval\Relation\ApprovalRelationSaveBo.cs" />
+    <Compile Include="Auth\AuthForgotPasswordBo.cs" />
+    <Compile Include="Auth\LoginBo.cs" />
+    <Compile Include="Auth\RegisterBo.cs" />
+    <Compile Include="Basket\BasketBo.cs" />
+    <Compile Include="Basket\BasketDeleteBo.cs" />
+    <Compile Include="Basket\BasketGetListCriteriaBo.cs" />
+    <Compile Include="Basket\BasketListBo.cs" />
+    <Compile Include="Basket\Product\BasketProductDeleteBo.cs" />
+    <Compile Include="Basket\Product\BasketProductIncludeExcludeUpdateBo.cs" />
+    <Compile Include="Basket\Product\BasketProductOptionUpdateBo.cs" />
+    <Compile Include="Basket\Product\BasketProductQuantityUpdateBo.cs" />
+    <Compile Include="Basket\Product\BasketProductSaveBo.cs" />
+    <Compile Include="Comment\CommentActionsBo.cs" />
+    <Compile Include="Comment\CommentBo.cs" />
+    <Compile Include="Comment\CommentDeleteBo.cs" />
+    <Compile Include="Comment\CommentGetActionsCriteriaBo.cs" />
+    <Compile Include="Comment\CommentGetCriteriaBo.cs" />
+    <Compile Include="Comment\CommentGetListCriteriaBo.cs" />
+    <Compile Include="Comment\CommentLikeBo.cs" />
+    <Compile Include="Comment\CommentListBo.cs" />
+    <Compile Include="Dashboard\Slider\DashboardSliderGetListCriteriaBo.cs" />
+    <Compile Include="Dashboard\Slider\DashboardSliderGroupListBo.cs" />
+    <Compile Include="Dashboard\Slider\DashboardSliderListBo.cs" />
+    <Compile Include="Dictionary\DictionaryBo.cs" />
+    <Compile Include="Dictionary\LanguageBo.cs" />
+    <Compile Include="EnumsOp\CurrenciesBo.cs" />
+    <Compile Include="EnumsOp\FicheContentBo.cs" />
+    <Compile Include="EnumsOp\ShopTypeBo.cs" />
+    <Compile Include="Fiche\FicheActionsBo.cs" />
+    <Compile Include="Fiche\FicheApprovalHistoryGetListCriteriaBo.cs" />
+    <Compile Include="Fiche\FicheApprovalHistoryListBo.cs" />
+    <Compile Include="Fiche\FicheBo.cs" />
+    <Compile Include="Fiche\FicheDeleteBo.cs" />
+    <Compile Include="Fiche\FicheGetActionsCriteriaBo.cs" />
+    <Compile Include="Fiche\FicheGetCriteriaBo.cs" />
+    <Compile Include="Fiche\FicheGetListCriteriaBo.cs" />
+    <Compile Include="Fiche\FicheListBo.cs" />
+    <Compile Include="Fiche\Money\FicheMoneyBo.cs" />
+    <Compile Include="Fiche\Money\FicheMoneyGetListCriteriaBo.cs" />
+    <Compile Include="Fiche\Money\FicheMoneyListBo.cs" />
+    <Compile Include="Fiche\Product\FicheProductBo.cs" />
+    <Compile Include="Fiche\Product\FicheProductGetListCriteriaBo.cs" />
+    <Compile Include="Fiche\Product\FicheProductListBo.cs" />
+    <Compile Include="Fiche\FicheVatTotalBo.cs" />
+    <Compile Include="Fiche\Relation\FicheRelationSaveBo.cs" />
+    <Compile Include="Help\HelpGetListCriteriaBo.cs" />
+    <Compile Include="Help\HelpListBo.cs" />
+    <Compile Include="Image\ImageBo.cs" />
+    <Compile Include="Image\ImageListCompressBo.cs" />
+    <Compile Include="IncludeExclude\IncludeExcludeBo.cs" />
+    <Compile Include="IncludeExclude\IncludeExcludeGetListCriteriaBo.cs" />
+    <Compile Include="IncludeExclude\IncludeExcludeSaveBo.cs" />
+    <Compile Include="Log\LogExceptionBo.cs" />
+    <Compile Include="Notification\EMail\NotificationEMailAttachListBo.cs" />
+    <Compile Include="Notification\EMail\NotificationEMailListBo.cs" />
+    <Compile Include="Notification\EMail\NotificationEMailLogBo.cs" />
+    <Compile Include="Notification\EMail\NotificationEMailReceiverBo.cs" />
+    <Compile Include="Notification\EMail\NotificationEMailReceiverListBo.cs" />
+    <Compile Include="Notification\EMail\NotificationEMailSentSaveBo.cs" />
+    <Compile Include="Notification\NotificationGetListCriteriaBo.cs" />
+    <Compile Include="Notification\NotificationListBo.cs" />
+    <Compile Include="Notification\NotificationSeenBo.cs" />
+    <Compile Include="Notification\Preference\NotificationPreferenceBo.cs" />
+    <Compile Include="Notification\Preference\NotificationPreferenceListBo.cs" />
+    <Compile Include="Notification\Preference\NotificationPreferenceSaveBo.cs" />
+    <Compile Include="Notification\Sms\NotificationSmsListBo.cs" />
+    <Compile Include="Notification\Sms\NotificationSmsLogBo.cs" />
+    <Compile Include="Notification\Sms\NotificationSmsReceiverListBo.cs" />
+    <Compile Include="Notification\Sms\NotificationSmsSentSaveBo.cs" />
+    <Compile Include="Option\OptionBo.cs" />
+    <Compile Include="Option\OptionGetListCriteriaBo.cs" />
+    <Compile Include="Option\OptionGroupGetListCriteriaBo.cs" />
+    <Compile Include="Option\OptionGroupListBo.cs" />
+    <Compile Include="Option\OptionListBo.cs" />
+    <Compile Include="Option\OptionSaveBo.cs" />
+    <Compile Include="Order\OrderGetListCriteriaBo.cs" />
+    <Compile Include="Order\OrderListBo.cs" />
+    <Compile Include="Order\OrderReturnSaveBo.cs" />
+    <Compile Include="Order\OrderSaveBo.cs" />
+    <Compile Include="Order\OrderStatListBo.cs" />
+    <Compile Include="Order\OrderStatNextListBo.cs" />
+    <Compile Include="Order\StatHistory\OrderStatHistoryBo.cs" />
+    <Compile Include="Order\StatHistory\OrderStatHistoryGetCriteriaBo.cs" />
+    <Compile Include="Order\StatHistory\OrderStatHistoryGetListCriteriaBo.cs" />
+    <Compile Include="Order\StatHistory\OrderStatHistoryListBo.cs" />
+    <Compile Include="Person\Account\PersonAccountActivityGetListCriteriaBo.cs" />
+    <Compile Include="Person\Account\PersonAccountActivityListBo.cs" />
+    <Compile Include="Person\Account\PersonAccountBo.cs" />
+    <Compile Include="Person\Account\PersonAccountDeleteBo.cs" />
+    <Compile Include="Person\Account\PersonAccountGetCriteriaBo.cs" />
+    <Compile Include="Person\Account\PersonAccountGetFastRetailCriteriaBo.cs" />
+    <Compile Include="Person\Account\PersonAccountGetListCriteriaBo.cs" />
+    <Compile Include="Person\Account\PersonAccountListBo.cs" />
+    <Compile Include="Person\Address\PersonAddressBo.cs" />
+    <Compile Include="Person\Address\PersonAddressDeleteBo.cs" />
+    <Compile Include="Person\Address\PersonAddressGetCriteriaBo.cs" />
+    <Compile Include="Person\Address\PersonAddressGetListCriteriaBo.cs" />
+    <Compile Include="Person\Address\PersonAddressListBo.cs" />
+    <Compile Include="Person\Alone\AlonePersonBo.cs" />
+    <Compile Include="Person\Alone\AlonePersonGetCriteriaBo.cs" />
+    <Compile Include="Person\Balance\PersonBalanceListBo.cs" />
+    <Compile Include="Person\Balance\PersonBalanceTotalListBo.cs" />
+    <Compile Include="Person\PersonNavMenuBo.cs" />
+    <Compile Include="Person\PersonNotifyListBo.cs" />
+    <Compile Include="Person\PersonGetListCriteriaBo.cs" />
+    <Compile Include="Person\PersonListBo.cs" />
+    <Compile Include="Person\PersonNotificationSummaryBo.cs" />
+    <Compile Include="Person\Product\PersonProductActivityGetListCriteriaBo.cs" />
+    <Compile Include="Person\Product\PersonProductActivityListBo.cs" />
+    <Compile Include="Person\Product\PersonProductAddInventoryBo.cs" />
+    <Compile Include="Person\Product\PersonProductBo.cs" />
+    <Compile Include="Person\Product\PersonProductCategoryGetListCriteriaBo.cs" />
+    <Compile Include="Person\Product\PersonProductDeleteBo.cs" />
+    <Compile Include="Person\Product\PersonProductGeneralBo.cs" />
+    <Compile Include="Person\Product\PersonProductGeneralGetCriteriaBo.cs" />
+    <Compile Include="Person\Product\PersonProductGetCriteriaBo.cs" />
+    <Compile Include="Person\Product\PersonProductGetListCriteriaBo.cs" />
+    <Compile Include="Person\Product\PersonProductIncludeExcludeBo.cs" />
+    <Compile Include="Person\Product\PersonProductListBo.cs" />
+    <Compile Include="Person\Product\PersonProductOptionBo.cs" />
+    <Compile Include="Person\Product\PersonProductProfileBo.cs" />
+    <Compile Include="Person\Product\PersonProductProfileGetCriteriaBo.cs" />
+    <Compile Include="Person\Product\PersonProductPropertyBo.cs" />
+    <Compile Include="Person\Product\PersonProductSeePriceBo.cs" />
+    <Compile Include="Person\Product\PersonProductSeePriceGetCriteriaBo.cs" />
+    <Compile Include="Person\Product\PersonProductUpdateBo.cs" />
+    <Compile Include="Person\Product\PersonProfileProductGetListCriteriaBo.cs" />
+    <Compile Include="Person\Product\PersonProfileProductListBo.cs" />
+    <Compile Include="Person\Relation\PersonRelationHasCriteriaBo.cs" />
+    <Compile Include="Person\Shop\ShopGeneralGetCriteriaBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderAccountGetListCriteriaBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderAccountListBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaDeleteBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaGetCriteriaBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaGetListCriteriaBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaListBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaSubBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaSubDeleteBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaSubListBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderGeneralBo.cs" />
+    <Compile Include="Person\Shop\ShopOrderGeneralGetCriteriaBo.cs" />
+    <Compile Include="Person\Shop\ShopProfileBo.cs" />
+    <Compile Include="Person\Shop\ShopProfileGetCriteriaBo.cs" />
+    <Compile Include="Person\Shop\ShopWorkingHoursGetCriteriaBo.cs" />
+    <Compile Include="Person\Table\PersonTableBo.cs" />
+    <Compile Include="Person\Table\PersonTableCountsBo.cs" />
+    <Compile Include="Person\Table\PersonTableDeleteBo.cs" />
+    <Compile Include="Person\Table\PersonTableGetCriteriaBo.cs" />
+    <Compile Include="Person\Table\PersonTableGetListCriteriaBo.cs" />
+    <Compile Include="Person\Table\PersonTableGroupBo.cs" />
+    <Compile Include="Person\Table\PersonTableGroupDeleteBo.cs" />
+    <Compile Include="Person\Table\PersonTableGroupGetCriteriaBo.cs" />
+    <Compile Include="Person\Table\PersonTableGroupGetListCriteriaBo.cs" />
+    <Compile Include="Person\Table\PersonTableGroupListBo.cs" />
+    <Compile Include="Person\Table\PersonTableListBo.cs" />
+    <Compile Include="Person\VerifyPhone\PersonVerifyPhoneGenBo.cs" />
+    <Compile Include="Person\VerifyPhone\PersonVerifyPhoneGenReturnBo.cs" />
+    <Compile Include="Person\VerifyPhone\PersonVerifyPhoneSaveBo.cs" />
+    <Compile Include="Product\Category\ProductCategoryCheckUrlBo.cs" />
+    <Compile Include="Product\Category\ProductCategoryCheckUrlCriteriaBo.cs" />
+    <Compile Include="Product\Category\ProductCategoryGetListAdminCriteriaBo.cs" />
+    <Compile Include="Product\Category\ProductCategoryGetListCriteriaBo.cs" />
+    <Compile Include="Product\Category\ProductCategoryListAdminBo.cs" />
+    <Compile Include="Product\Category\ProductCategoryListBo.cs" />
+    <Compile Include="Product\Code\ProductCodeGetListCriteriaBo.cs" />
+    <Compile Include="Product\Code\ProductCodeListBo.cs" />
+    <Compile Include="Product\Filter\ProductFilterGetListCriteriaBo.cs" />
+    <Compile Include="Product\Filter\ProductFilterGetListExtraCriteriaBo.cs" />
+    <Compile Include="Product\Filter\ProductFilterListBo.cs" />
+    <Compile Include="Product\Filter\ProductFilterListExtraBo.cs" />
+    <Compile Include="Product\Filter\ProductFilterListSummaryBo.cs" />
+    <Compile Include="Product\Filter\ProductFilterPoolGetListCriteriaBo.cs" />
+    <Compile Include="Product\Filter\ProductFilterPoolListBo.cs" />
+    <Compile Include="Person\Real\RealPersonBo.cs" />
+    <Compile Include="Person\Relation\Find\PersonRelationFindGetListCriteriaBo.cs" />
+    <Compile Include="Person\Relation\Find\PersonRelationFindListBo.cs" />
+    <Compile Include="Person\Relation\PersonRelationAvaibleTypeGetListCriteriaBo.cs" />
+    <Compile Include="Person\Relation\PersonRelationDeleteBo.cs" />
+    <Compile Include="Person\Relation\PersonRelationGetListCriteriaBo.cs" />
+    <Compile Include="Person\Relation\PersonRelationListBo.cs" />
+    <Compile Include="Person\Relation\PersonRelationRuleGetListCriteriaBo.cs" />
+    <Compile Include="Person\Relation\PersonRelationRuleListBo.cs" />
+    <Compile Include="Person\Shop\RegisterShopBo.cs" />
+    <Compile Include="Person\Shop\ShopAddressBo.cs" />
+    <Compile Include="Person\Shop\ShopListBo.cs" />
+    <Compile Include="Person\Shop\ShopGeneralBo.cs" />
+    <Compile Include="Person\Shop\ShopWorkingHoursBo.cs" />
+    <Compile Include="Pos\PosProductShortCutGroupBo.cs" />
+    <Compile Include="Pos\PosProductShortCutListBo.cs" />
+    <Compile Include="Pos\PosProductShortCutBo.cs" />
+    <Compile Include="Product\Code\ProductCodeBo.cs" />
+    <Compile Include="Product\Price\ProductPriceBo.cs" />
+    <Compile Include="Product\ProductSaveBo.cs" />
+    <Compile Include="Product\ProductStarBo.cs" />
+    <Compile Include="Product\ProductUpdateBo.cs" />
+    <Compile Include="Product\ProductUpdateCheckBo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property\PropertyGetListCriteriaBo.cs" />
+    <Compile Include="Property\PropertyGroupGetListCriteriaBo.cs" />
+    <Compile Include="Property\PropertyGroupListBo.cs" />
+    <Compile Include="Property\PropertyListBo.cs" />
+    <Compile Include="Property\PropertySaveBo.cs" />
+    <Compile Include="Report\ReportPersonSummaryBo.cs" />
+    <Compile Include="Report\ReportPersonSummaryGetCriteriaBo.cs" />
+    <Compile Include="Sys\BaseBo.cs" />
+    <Compile Include="Sys\ResponseBo.cs" />
+    <Compile Include="Sys\SysMailBo.cs" />
+    <Compile Include="Sys\SysSmsBo.cs" />
+    <Compile Include="Sys\SysVersionBo.cs" />
+    <Compile Include="Sys\SysVersionGetLatestCriteriaBo.cs" />
+    <Compile Include="Warning\WarningBo.cs" />
+    <Compile Include="Warning\WarningCheckBo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mh.Enums\Mh.Enums.csproj">
+      <Project>{aa245a4d-ddc2-4288-8694-3852397bcaee}</Project>
+      <Name>Mh.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mh.Sessions\Mh.Sessions.csproj">
+      <Project>{c936b313-8adc-411d-8581-04c4e62dac1c}</Project>
+      <Name>Mh.Sessions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mh.Utils\Mh.Utils.csproj">
+      <Project>{E228DA7D-D268-4AD1-9C8D-A5A9BC28CBB0}</Project>
+      <Name>Mh.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Rayon\" />
+    <Folder Include="Sector\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

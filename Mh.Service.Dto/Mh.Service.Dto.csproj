@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9106414D-3319-41B8-ABF5-C366B3652E90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mh.Service.Dto</RootNamespace>
+    <AssemblyName>Mh.Service.Dto</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address\AddressCityDto.cs" />
+    <Compile Include="Address\AddressCountryDto.cs" />
+    <Compile Include="Address\AddressDistrictDto.cs" />
+    <Compile Include="Address\AddressGetCityListCriteriaDto.cs" />
+    <Compile Include="Address\AddressGetDistrictListCriteriaDto.cs" />
+    <Compile Include="Address\AddressGetLocalityListCriteriaDto.cs" />
+    <Compile Include="Address\AddressGetStateListCriteriaDto.cs" />
+    <Compile Include="Address\AddressLocalityDto.cs" />
+    <Compile Include="Address\AddressStateDto.cs" />
+    <Compile Include="Approval\Fiche\ApprovalFicheGetListCriteriaDto.cs" />
+    <Compile Include="Approval\Fiche\ApprovalFicheListDto.cs" />
+    <Compile Include="Approval\Fiche\ApprovalFicheSaveDto.cs" />
+    <Compile Include="Approval\Relation\ApprovalRelationGetListCriteriaDto.cs" />
+    <Compile Include="Approval\Relation\ApprovalRelationListDto.cs" />
+    <Compile Include="Approval\Relation\ApprovalRelationRequestDto.cs" />
+    <Compile Include="Approval\Relation\ApprovalRelationSaveDto.cs" />
+    <Compile Include="Auth\AuthForgotPasswordDto.cs" />
+    <Compile Include="Auth\LoginAsAnonymousDto.cs" />
+    <Compile Include="Auth\LoginDto.cs" />
+    <Compile Include="Auth\LoginReturnDto.cs" />
+    <Compile Include="Auth\RegisterDto.cs" />
+    <Compile Include="Basket\BasketDeleteDto.cs" />
+    <Compile Include="Basket\BasketDto.cs" />
+    <Compile Include="Basket\BasketGetListCriteriaDto.cs" />
+    <Compile Include="Basket\BasketListDto.cs" />
+    <Compile Include="Basket\Product\BasketProductDeleteDto.cs" />
+    <Compile Include="Basket\Product\BasketProductIncludeExcludeUpdateDto.cs" />
+    <Compile Include="Basket\Product\BasketProductListDto.cs" />
+    <Compile Include="Basket\Product\BasketProductOptionUpdateDto.cs" />
+    <Compile Include="Basket\Product\BasketProductQuantityUpdateDto.cs" />
+    <Compile Include="Basket\Product\BasketProductSaveDto.cs" />
+    <Compile Include="Comment\CommentActionsDto.cs" />
+    <Compile Include="Comment\CommentDeleteDto.cs" />
+    <Compile Include="Comment\CommentDto.cs" />
+    <Compile Include="Comment\CommentGetActionsCriteriaDto.cs" />
+    <Compile Include="Comment\CommentGetCriteriaDto.cs" />
+    <Compile Include="Comment\CommentGetListCriteriaDto.cs" />
+    <Compile Include="Comment\CommentLikeDto.cs" />
+    <Compile Include="Comment\CommentListDto.cs" />
+    <Compile Include="Dashboard\Slider\DashboardSliderGetListCriteriaDto.cs" />
+    <Compile Include="Dashboard\Slider\DashboardSliderGroupListDto.cs" />
+    <Compile Include="Dashboard\Slider\DashboardSliderListDto.cs" />
+    <Compile Include="Dictionary\DictionaryDto.cs" />
+    <Compile Include="Dictionary\DictionaryGetListCriteriaDto.cs" />
+    <Compile Include="Dictionary\LanguageDto.cs" />
+    <Compile Include="EnumsOp\CurrenciesDto.cs" />
+    <Compile Include="EnumsOp\FicheContentDto.cs" />
+    <Compile Include="EnumsOp\FicheContentGroupDto.cs" />
+    <Compile Include="EnumsOp\FicheTypeFakeDto.cs" />
+    <Compile Include="EnumsOp\ShopTypeDto.cs" />
+    <Compile Include="EnumsOp\ShopTypeGroupDto.cs" />
+    <Compile Include="Fiche\FicheActionsDto.cs" />
+    <Compile Include="Fiche\FicheApprovalHistoryGetListCriteriaDto.cs" />
+    <Compile Include="Fiche\FicheApprovalHistoryListDto.cs" />
+    <Compile Include="Fiche\FicheDeleteDto.cs" />
+    <Compile Include="Fiche\FicheDto.cs" />
+    <Compile Include="Fiche\FicheGetActionsCriteriaDto.cs" />
+    <Compile Include="Fiche\FicheGetCriteriaDto.cs" />
+    <Compile Include="Fiche\FicheGetListCriteriaDto.cs" />
+    <Compile Include="Fiche\FicheListDto.cs" />
+    <Compile Include="Fiche\Money\FicheMoneyDto.cs" />
+    <Compile Include="Fiche\Money\FicheMoneyGetListCriteriaDto.cs" />
+    <Compile Include="Fiche\Money\FicheMoneyListDto.cs" />
+    <Compile Include="Fiche\Product\FicheProductDto.cs" />
+    <Compile Include="Fiche\Product\FicheProductGetListCriteriaDto.cs" />
+    <Compile Include="Fiche\Product\FicheProductListDto.cs" />
+    <Compile Include="Fiche\FicheVatTotalDto.cs" />
+    <Compile Include="Fiche\Relation\FicheRelationSaveDto.cs" />
+    <Compile Include="Help\HelpGetListCriteriaDto.cs" />
+    <Compile Include="Help\HelpListDto.cs" />
+    <Compile Include="IncludeExclude\IncludeExcludeDto.cs" />
+    <Compile Include="IncludeExclude\IncludeExcludeGetListCriteriaDto.cs" />
+    <Compile Include="IncludeExclude\IncludeExcludeSaveDto.cs" />
+    <Compile Include="Log\LogExceptionDto.cs" />
+    <Compile Include="Notification\NotificationGetListCriteriaDto.cs" />
+    <Compile Include="Notification\NotificationListDto.cs" />
+    <Compile Include="Notification\NotificationSeenDto.cs" />
+    <Compile Include="Notification\Preference\NotificationPreferenceDto.cs" />
+    <Compile Include="Notification\Preference\NotificationPreferenceListDto.cs" />
+    <Compile Include="Notification\Preference\NotificationPreferenceListSubDto.cs" />
+    <Compile Include="Notification\Preference\NotificationPreferenceSaveDto.cs" />
+    <Compile Include="Notification\Preference\NotificationPreferenceTypeListDto.cs" />
+    <Compile Include="Option\OptionDto.cs" />
+    <Compile Include="Option\OptionGetListCriteriaDto.cs" />
+    <Compile Include="Option\OptionGroupGetListCriteriaDto.cs" />
+    <Compile Include="Option\OptionGroupListDto.cs" />
+    <Compile Include="Option\OptionListDto.cs" />
+    <Compile Include="Option\OptionSaveDto.cs" />
+    <Compile Include="Order\OrderGetListCriteriaDto.cs" />
+    <Compile Include="Order\OrderListDto.cs" />
+    <Compile Include="Order\OrderReturnSaveDto.cs" />
+    <Compile Include="Order\OrderSaveDto.cs" />
+    <Compile Include="Order\OrderStatListDto.cs" />
+    <Compile Include="Order\OrderStatNextListDto.cs" />
+    <Compile Include="Order\Product\OrderProductListDto.cs" />
+    <Compile Include="Order\StatHistory\OrderStatHistoryDto.cs" />
+    <Compile Include="Order\StatHistory\OrderStatHistoryGetCriteriaDto.cs" />
+    <Compile Include="Order\StatHistory\OrderStatHistoryGetListCriteriaDto.cs" />
+    <Compile Include="Order\StatHistory\OrderStatHistoryListDto.cs" />
+    <Compile Include="Person\Account\PersonAccountActivityGetListCriteriaDto.cs" />
+    <Compile Include="Person\Account\PersonAccountActivityListDto.cs" />
+    <Compile Include="Person\Account\PersonAccountDeleteDto.cs" />
+    <Compile Include="Person\Account\PersonAccountDto.cs" />
+    <Compile Include="Person\Account\PersonAccountGetCriteriaDto.cs" />
+    <Compile Include="Person\Account\PersonAccountGetFastRetailCriteriaDto.cs" />
+    <Compile Include="Person\Account\PersonAccountGetListCriteriaDto.cs" />
+    <Compile Include="Person\Account\PersonAccountListDto.cs" />
+    <Compile Include="Person\Address\PersonAddressDeleteDto.cs" />
+    <Compile Include="Person\Address\PersonAddressGetCriteriaDto.cs" />
+    <Compile Include="Person\Address\PersonAddressGetListCriteriaDto.cs" />
+    <Compile Include="Person\Alone\AlonePersonDto.cs" />
+    <Compile Include="Person\Alone\AlonePersonGetCriteriaDto.cs" />
+    <Compile Include="Person\Balance\PersonBalanceListDto.cs" />
+    <Compile Include="Person\Address\PersonAddressDto.cs" />
+    <Compile Include="Person\Address\PersonAddressListDto.cs" />
+    <Compile Include="Person\Balance\PersonBalanceTotalListDto.cs" />
+    <Compile Include="Person\PersonChangeMyPersonDto.cs" />
+    <Compile Include="Person\PersonChangeSelectedCurrencyDto.cs" />
+    <Compile Include="Person\PersonGetListCriteriaDto.cs" />
+    <Compile Include="Person\PersonListDto.cs" />
+    <Compile Include="Person\PersonNavMenuDto.cs" />
+    <Compile Include="Person\PersonNotificationSummaryDto.cs" />
+    <Compile Include="Person\PersonNotifyListDto.cs" />
+    <Compile Include="Person\Product\PersonProductActivityGetListCriteriaDto.cs" />
+    <Compile Include="Person\Product\PersonProductActivityListDto.cs" />
+    <Compile Include="Person\Product\PersonProductAddInventoryDto.cs" />
+    <Compile Include="Person\Product\PersonProductCategoryGetListCriteriaDto.cs" />
+    <Compile Include="Person\Product\PersonProductDeleteDto.cs" />
+    <Compile Include="Person\Product\PersonProductDto.cs" />
+    <Compile Include="Person\Product\PersonProductGeneralDto.cs" />
+    <Compile Include="Person\Product\PersonProductGeneralGetCriteriaDto.cs" />
+    <Compile Include="Person\Product\PersonProductGetCriteriaDto.cs" />
+    <Compile Include="Person\Product\PersonProductGetListCriteriaDto.cs" />
+    <Compile Include="Person\Product\PersonProductIncludeExcludeDto.cs" />
+    <Compile Include="Person\Product\PersonProductListDto.cs" />
+    <Compile Include="Person\Product\PersonProductOptionDto.cs" />
+    <Compile Include="Person\Product\PersonProductProfileDto.cs" />
+    <Compile Include="Person\Product\PersonProductProfileGetCriteriaDto.cs" />
+    <Compile Include="Person\Product\PersonProductPropertyDto.cs" />
+    <Compile Include="Person\Product\PersonProductSeePriceDto.cs" />
+    <Compile Include="Person\Product\PersonProductSeePriceGetCriteriaDto.cs" />
+    <Compile Include="Person\Product\PersonProductUpdateDto.cs" />
+    <Compile Include="Person\Product\PersonProfileProductGetListCriteriaDto.cs" />
+    <Compile Include="Person\Product\PersonProfileProductListDto.cs" />
+    <Compile Include="Person\Real\RealPersonDto.cs" />
+    <Compile Include="Person\Relation\Find\PersonRelationFindGetListCriteriaDto.cs" />
+    <Compile Include="Person\Relation\Find\PersonRelationFindListDto.cs" />
+    <Compile Include="Person\Relation\PersonRelationAvaibleTypeGetListCriteriaDto.cs" />
+    <Compile Include="Person\Relation\PersonRelationDeleteDto.cs" />
+    <Compile Include="Person\Relation\PersonRelationGetListCriteriaDto.cs" />
+    <Compile Include="Person\Relation\PersonRelationHasCriteriaDto.cs" />
+    <Compile Include="Person\Relation\PersonRelationListDto.cs" />
+    <Compile Include="Person\Relation\PersonRelationRuleGetListCriteriaDto.cs" />
+    <Compile Include="Person\Relation\PersonRelationRuleListDto.cs" />
+    <Compile Include="Person\Relation\PersonRelationSubListDto.cs" />
+    <Compile Include="Person\Shop\RegisterShopDto.cs" />
+    <Compile Include="Person\Shop\ShopAddressDto.cs" />
+    <Compile Include="Person\Shop\ShopGeneralGetCriteriaDto.cs" />
+    <Compile Include="Person\Shop\ShopListDto.cs" />
+    <Compile Include="Person\Shop\ShopGeneralDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderAccountGetListCriteriaDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderAccountListDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaDeleteDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaGetCriteriaDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaGetListCriteriaDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaListDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaSubDeleteDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaSubDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderAreaSubListDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderGeneralDto.cs" />
+    <Compile Include="Person\Shop\ShopOrderGeneralGetCriteriaDto.cs" />
+    <Compile Include="Person\Shop\ShopProfileDto.cs" />
+    <Compile Include="Person\Shop\ShopProfileGetCriteriaDto.cs" />
+    <Compile Include="Person\Shop\ShopTypeDto.cs" />
+    <Compile Include="Person\Shop\ShopTypeGroupDto.cs" />
+    <Compile Include="Person\Shop\ShopWorkingHoursDto.cs" />
+    <Compile Include="Person\Shop\ShopWorkingHoursGetCriteriaDto.cs" />
+    <Compile Include="Person\Table\PersonTableCountsDto.cs" />
+    <Compile Include="Person\Table\PersonTableDeleteDto.cs" />
+    <Compile Include="Person\Table\PersonTableDto.cs" />
+    <Compile Include="Person\Table\PersonTableGetCriteriaDto.cs" />
+    <Compile Include="Person\Table\PersonTableGetListCriteriaDto.cs" />
+    <Compile Include="Person\Table\PersonTableGroupDeleteDto.cs" />
+    <Compile Include="Person\Table\PersonTableGroupDto.cs" />
+    <Compile Include="Person\Table\PersonTableGroupGetCriteriaDto.cs" />
+    <Compile Include="Person\Table\PersonTableGroupGetListCriteriaDto.cs" />
+    <Compile Include="Person\Table\PersonTableGroupListDto.cs" />
+    <Compile Include="Person\Table\PersonTableListDto.cs" />
+    <Compile Include="Person\VerifyPhone\PersonVerifyPhoneGenDto.cs" />
+    <Compile Include="Person\VerifyPhone\PersonVerifyPhoneGenReturnDto.cs" />
+    <Compile Include="Person\VerifyPhone\PersonVerifyPhoneSaveDto.cs" />
+    <Compile Include="Pos\PosProductShortCutGroupDto.cs" />
+    <Compile Include="Pos\PosProductShortCutGroupListDto.cs" />
+    <Compile Include="Pos\PosProductShortCutListDto.cs" />
+    <Compile Include="Pos\PosProductShortCutDto.cs" />
+    <Compile Include="Product\Category\ProductCategoryCheckUrlCriteriaDto.cs" />
+    <Compile Include="Product\Category\ProductCategoryCheckUrlDto.cs" />
+    <Compile Include="Product\Category\ProductCategoryGetListAdminCriteriaDto.cs" />
+    <Compile Include="Product\Category\ProductCategoryGetListCriteriaDto.cs" />
+    <Compile Include="Product\Category\ProductCategoryListAdminDto.cs" />
+    <Compile Include="Product\Category\ProductCategoryListDto.cs" />
+    <Compile Include="Product\Category\ProductCategoryRawListDto.cs" />
+    <Compile Include="Product\Code\ProductCodeGetListCriteriaDto.cs" />
+    <Compile Include="Product\Code\ProductCodeListDto.cs" />
+    <Compile Include="Product\Code\ProductCodeDto.cs" />
+    <Compile Include="Product\Filter\ProductFilterGetListCriteriaDto.cs" />
+    <Compile Include="Product\Filter\ProductFilterGetListExtraCriteriaDto.cs" />
+    <Compile Include="Product\Filter\ProductFilterListDto.cs" />
+    <Compile Include="Product\Filter\ProductFilterListExtraDto.cs" />
+    <Compile Include="Product\Filter\ProductFilterListSummaryDto.cs" />
+    <Compile Include="Product\Filter\ProductFilterPoolGetListCriteriaDto.cs" />
+    <Compile Include="Product\Filter\ProductFilterPoolListDto.cs" />
+    <Compile Include="Product\Image\ProductImageDto.cs" />
+    <Compile Include="Product\Price\ProductPriceDto.cs" />
+    <Compile Include="Product\ProductSaveDto.cs" />
+    <Compile Include="Product\ProductStarDto.cs" />
+    <Compile Include="Product\ProductUpdateCheckDto.cs" />
+    <Compile Include="Product\ProductUpdateDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property\PropertyGetListCriteriaDto.cs" />
+    <Compile Include="Property\PropertyGroupGetListCriteriaDto.cs" />
+    <Compile Include="Property\PropertyGroupListDto.cs" />
+    <Compile Include="Property\PropertyListDto.cs" />
+    <Compile Include="Property\PropertySaveDto.cs" />
+    <Compile Include="Report\ReportPersonSummaryDto.cs" />
+    <Compile Include="Report\ReportPersonSummaryGetCriteriaDto.cs" />
+    <Compile Include="Sys\BaseDto.cs" />
+    <Compile Include="Sys\ResponseDto.cs" />
+    <Compile Include="Sys\SysVersionDto.cs" />
+    <Compile Include="Sys\SysVersionGetLatestCriteriaDto.cs" />
+    <Compile Include="Warning\WarningCheckDto.cs" />
+    <Compile Include="Warning\WarningDto.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Mh.Enums\Mh.Enums.csproj">
+      <Project>{aa245a4d-ddc2-4288-8694-3852397bcaee}</Project>
+      <Name>Mh.Enums</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

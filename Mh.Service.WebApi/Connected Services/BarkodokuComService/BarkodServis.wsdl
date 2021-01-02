@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://barkodoku.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://barkodoku.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://barkodoku.com/">
+      <s:element name="Merhaba">
+        <s:complexType />
+      </s:element>
+      <s:element name="MerhabaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerhabaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BarkodGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="barkod" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BarkodGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BarkodGetirResult" type="tns:BarkodSonuc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BarkodSonuc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UrunBarkod" type="tns:Barkod" />
+          <s:element minOccurs="0" maxOccurs="1" name="HataMesaji" type="tns:Hata" />
+          <s:element minOccurs="0" maxOccurs="1" name="BarkodCozumu" type="tns:BarkodCozum" />
+          <s:element minOccurs="0" maxOccurs="1" name="KotaBilgisi" type="tns:KotaBilgi" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Barkod">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UrunBarkod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UrunAd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UrunDetay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BarkodTip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Uretici" type="tns:Firma" />
+          <s:element minOccurs="0" maxOccurs="1" name="UrunFiyat" type="tns:ArrayOfFiyat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Firma">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FirmaAdi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmaAdres" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmaSehir" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmaIlce" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmaTelefon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmaFaks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Firma444" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmaSektor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmaWeb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmaLogo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFiyat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Fiyat" nillable="true" type="tns:Fiyat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Fiyat">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UrunFiyat" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="FiyatTarih" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FiyatMekan" type="tns:Mekan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Mekan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MekanAdi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MekanAdres" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MekanSehir" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Hata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="HataKodu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HataAciklama" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BarkodCozum">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Mensei" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UreticiKodu" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UrunKodu" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KotaBilgi">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="KalanKota" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="KotaSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KotaSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="KotaSorgulaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QRKodOlustur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="veri" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QRKodOlusturResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QRKodOlusturResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MerhabaSoapIn">
+    <wsdl:part name="parameters" element="tns:Merhaba" />
+  </wsdl:message>
+  <wsdl:message name="MerhabaSoapOut">
+    <wsdl:part name="parameters" element="tns:MerhabaResponse" />
+  </wsdl:message>
+  <wsdl:message name="BarkodGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:BarkodGetir" />
+  </wsdl:message>
+  <wsdl:message name="BarkodGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:BarkodGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="KotaSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:KotaSorgula" />
+  </wsdl:message>
+  <wsdl:message name="KotaSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:KotaSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="QRKodOlusturSoapIn">
+    <wsdl:part name="parameters" element="tns:QRKodOlustur" />
+  </wsdl:message>
+  <wsdl:message name="QRKodOlusturSoapOut">
+    <wsdl:part name="parameters" element="tns:QRKodOlusturResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BarkodServisSoap">
+    <wsdl:operation name="Merhaba">
+      <wsdl:input message="tns:MerhabaSoapIn" />
+      <wsdl:output message="tns:MerhabaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BarkodGetir">
+      <wsdl:input message="tns:BarkodGetirSoapIn" />
+      <wsdl:output message="tns:BarkodGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KotaSorgula">
+      <wsdl:input message="tns:KotaSorgulaSoapIn" />
+      <wsdl:output message="tns:KotaSorgulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QRKodOlustur">
+      <wsdl:input message="tns:QRKodOlusturSoapIn" />
+      <wsdl:output message="tns:QRKodOlusturSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BarkodServisSoap" type="tns:BarkodServisSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Merhaba">
+      <soap:operation soapAction="http://barkodoku.com/Merhaba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BarkodGetir">
+      <soap:operation soapAction="http://barkodoku.com/BarkodGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KotaSorgula">
+      <soap:operation soapAction="http://barkodoku.com/KotaSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QRKodOlustur">
+      <soap:operation soapAction="http://barkodoku.com/QRKodOlustur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BarkodServisSoap12" type="tns:BarkodServisSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Merhaba">
+      <soap12:operation soapAction="http://barkodoku.com/Merhaba" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BarkodGetir">
+      <soap12:operation soapAction="http://barkodoku.com/BarkodGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KotaSorgula">
+      <soap12:operation soapAction="http://barkodoku.com/KotaSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QRKodOlustur">
+      <soap12:operation soapAction="http://barkodoku.com/QRKodOlustur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BarkodServis">
+    <wsdl:port name="BarkodServisSoap" binding="tns:BarkodServisSoap">
+      <soap:address location="https://www.barkodoku.com/ws/BarkodServis.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BarkodServisSoap12" binding="tns:BarkodServisSoap12">
+      <soap12:address location="https://www.barkodoku.com/ws/BarkodServis.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
