@@ -1,4 +1,5 @@
-# Backend
+# The backend of 'Elmasium'
+
 This is the whole back end directory of 'Elmasium'.
 
 There are business, dto, poco and rest api classes.
